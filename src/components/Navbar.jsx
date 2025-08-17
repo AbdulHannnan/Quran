@@ -5,16 +5,18 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-600 text-white flex items-center justify-between">
       {/* Left: Logo */}
-      <div className="p-6">
+      <div className="pl-[94px]">
         <img src={logo} alt="Logo" className="h-10 w-auto" />
       </div>
 
       {/* Center: Arabic word */}
-      <div className="text-2xl font-bold">
-إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ      </div>
+      <div className="text-[24px] font-nastaliq font-bold">
+  إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ
+</div>
+
 
       {/* Right: Navigation */}
-      <ul className="flex gap-6 p-6">
+      <ul className="flex gap-6 p-6 pr-[50px]">
         <li><Link to="/" className="hover:underline">Home</Link></li>
         <li><Link to="/surah" className="hover:underline">Surah</Link></li>
         <li><Link to="/about" className="hover:underline">About</Link></li>

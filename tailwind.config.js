@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nastaliq: ['"Noto Nastaliq Urdu"', 'serif'],
+        bebas: ['"Bebas Neue"',],
+      
+        monte: ['"Montserrat Alternates"', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
