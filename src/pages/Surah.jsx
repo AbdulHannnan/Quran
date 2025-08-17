@@ -20,7 +20,6 @@ const Surah = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {Array.from({ length: 30 }, (_, i) => i + 1).map((num) => {
           const pdfUrl = `/pdfs/Parah${num}.pdf`;
-          const googleViewUrl = `https://docs.google.com/gview?url=${window.location.origin}${pdfUrl}&embedded=true`;
 
           return (
             <div
@@ -32,7 +31,7 @@ const Surah = () => {
               {/* Dots Button */}
               <button
                 onClick={(e) => {
-                  e.stopPropagation(); // prevent click bubbling
+                  e.stopPropagation();
                   setOpenMenu(openMenu === num ? null : num);
                 }}
                 className="p-2 hover:bg-gray-100 rounded-full transition"
@@ -43,12 +42,12 @@ const Surah = () => {
               {/* Dropdown */}
               {openMenu === num && (
                 <div
-                  onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
+                  onClick={(e) => e.stopPropagation()}
                   className="absolute top-full right-2 mt-2 bg-white border rounded-lg shadow-lg w-40 z-50 animate-fade-in"
                 >
-                  {/* Read */}
+                  {/* Read (open directly in browser) */}
                   <a
-                    href={googleViewUrl}
+                    href={pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block px-4 py-2 hover:bg-gray-100 transition"
