@@ -24,42 +24,41 @@ const Surah = () => {
           return (
             <div
               key={num}
-              className="relative bg-white border-2 border-black p-6 rounded-xl shadow hover:shadow-xl transition duration-300 cursor-pointer flex justify-between items-center"
+              className="relative bg-white border-2 border-black p-3 rounded-xl shadow hover:shadow-xl transition duration-300 cursor-pointer flex justify-between items-center"
             >
-              <span className="font-medium">Parah {num}</span>
+              {/* Bigger Parah text */}
+              <span className="font-semibold text-[24px]">Parah {num}</span>
 
-              {/* Dots Button */}
+              {/* Bigger Dots Button */}
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   setOpenMenu(openMenu === num ? null : num);
                 }}
-                className="p-2 hover:bg-gray-100 rounded-full transition"
+                className="p-3 hover:bg-gray-100 rounded-full transition"
               >
-                <FiMoreVertical size={20} />
+                <FiMoreVertical size={28} /> {/* increased from 20 → 28 */}
               </button>
 
               {/* Dropdown */}
               {openMenu === num && (
                 <div
                   onClick={(e) => e.stopPropagation()}
-                  className="absolute top-full right-2 mt-2 bg-white border rounded-lg shadow-lg w-40 z-50 animate-fade-in"
+                  className="absolute top-full right-2 mt-2 bg-white border rounded-lg shadow-lg w-44 z-50 animate-fade-in"
                 >
-                  {/* Read (open directly in browser) */}
                   <a
                     href={pdfUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block px-4 py-2 hover:bg-gray-100 transition"
+                    className="block px-4 py-2 text-[16px] hover:bg-gray-100 transition"
                   >
                     📖 Read
                   </a>
 
-                  {/* Download */}
                   <a
                     href={pdfUrl}
                     download={`Parah${num}.pdf`}
-                    className="block px-4 py-2 hover:bg-gray-100 transition"
+                    className="block px-4 py-2 text-[16px] hover:bg-gray-100 transition"
                   >
                     ⬇️ Download
                   </a>
