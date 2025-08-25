@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import heroBg from "../assets/bg pic.jpg"; // 👈 adjust path if needed
-
+import heroBg from "../assets/bg pic.jpg"; 
 const Hero = () => {
   return (
     <section
@@ -9,8 +8,8 @@ const Hero = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="relative h-screen flex flex-col justify-center items-center text-center px-4"
-    >
+      className="relative h-screen flex flex-col justify-center items-center text-center px-4">
+        
       {/* Black overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
